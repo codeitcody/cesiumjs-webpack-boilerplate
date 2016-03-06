@@ -1,6 +1,8 @@
-# Cesium Webpack Boilerplate #
+<h1 align="center">Cesium Webpack Boilerplate</h1>
 
 This project sets a minimal environment for easily getting started with [CesiumJs](https://cesiumjs.org). It uses **webpack** as a build tool and **npm** as a task runner.
+
+![cesiumjs](http://maxlab.fr/img/cesiumjs.jpg)
 
 ## What it does ##
 This boilerplate allows you to **experiment quickly** and focus on your project rather than loose time to configure it.
