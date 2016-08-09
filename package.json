@@ -1,14 +1,14 @@
 {
   "name": "cesium-webpack-boilerplate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A boilerplate for cesiumjs",
   "main": "app.js",
   "scripts": {
     "clean": "mkdirp public & rimraf public/*",
-    "build": "npm run clean && cpx ./node_modules/cesium/Build/Cesium/**/* ./public && webpack --config config/webpack.config.js --progress",
-    "devserver" : "webpack-dev-server --config config/webpack.config.js --progress --display-error-details",
+    "build": "npm run clean && cpr node_modules/cesium/Build/Cesium public && webpack --config config/webpack.config.js --progress",
+    "devserver": "webpack-dev-server --config config/webpack.config.js --progress --display-error-details",
     "dev": "npm run build && npm run devserver",
-    "release" :"npm run build -- --optimize-minimize"
+    "release": "npm run build -- --optimize-minimize"
   },
   "author": "Maxime Warnier",
   "license": "MIT",
@@ -16,15 +16,15 @@
     "cesium": "^1.19.0"
   },
   "devDependencies": {
-    "cpx": "^1.2.1",
-    "mkdirp": "^0.5.1",
-    "rimraf": "^2.5.2",
-    "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1",
+    "cpr": "^1.1.2",
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.2",
     "script-loader": "^0.7.0",
-    "style-loader": "^0.13.0"
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
   }
 }
