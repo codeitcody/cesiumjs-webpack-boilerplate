@@ -1,7 +1,13 @@
-require('cesium/Source/Widgets/widgets.css');
-var BuildModuleUrl = require('cesium/Source/Core/buildModuleUrl');
-BuildModuleUrl.setBaseUrl('./');
+window.CESIUM_BASE_URL = "./"
 
-var Viewer = require('cesium/Source/Widgets/Viewer/Viewer');
+if (process.env.NODE_ENV === "dev") {
+  require("../lib/CesiumUnminified/Cesium.js")
+} else {
+  require("../lib/Cesium/Cesium.js")
+}
 
-var viewer = new Viewer('cesiumContainer');
+require("../lib/Cesium/Widgets/widgets.css")
+
+var Cesium = window.Cesium
+
+var viewer = new Cesium.Viewer("cesiumContainer")
