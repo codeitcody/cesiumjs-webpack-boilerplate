@@ -17,6 +17,8 @@ module.exports = {
       template: "./src/index.html",
       inject: "body"
     }),
+    //this allow to dynamically load the unminified version of cesium
+    // you can set it to prod or comment this plugin to load Cesium minified version
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: JSON.stringify("dev")
